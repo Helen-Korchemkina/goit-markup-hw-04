@@ -4,6 +4,7 @@
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --button-accent-color: #188ce8;
+  --background-hero-color: #c4c4c4;
   --background-grey-color: #2f303a;
   --background-light-color: #f5f4fa;
   --logo-black-color: #000000;
@@ -110,11 +111,22 @@ ul {
 
 /*hero*/
 .hero {
-  background-color: var(--background-grey-color);
   color: var(--second-text-color);
   text-align: center;
+  max-width: 1600px;
+  min-height: 600px;
 
+  margin-left: auto;
+  margin-right: auto;
   padding: 200px 15px;
+
+  background-color: var(--background-hero-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .hero-title {
   font-weight: 900;
@@ -141,12 +153,29 @@ ul {
 .excellence {
   padding-bottom: 0px;
 }
-.attention-detail {
+.excellence-ul-list {
   display: flex;
   justify-content: space-between;
 }
-.attention-detail li {
+.excellence-ul-list li {
   width: 270px;
+}
+.list-item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-color: var(--background-light-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+}
+.antenna::before {
+}
+.punctuality::before {
+}
+.planning::before {
+}
+.tehnology {
 }
 
 /*what we do*/
@@ -309,5 +338,11 @@ ul {
   border-top: none;
 }
 .hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
